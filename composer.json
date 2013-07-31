@@ -1,18 +1,18 @@
 {
-    "name": "czproject/css-minifier",
-    "description": "Simple CSS minifier.",
-    "license": "BSD-3-Clause",
-    "authors": [
-    	{
+	"name": "czproject/css-minifier",
+	"description": "Simple CSS minifier.",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
 			"name": "David Grudl",
 			"homepage": "http://davidgrudl.com"
 		},
-        {
-            "name": "Jan Pecha",
-            "email": "janpecha@email.cz"
-        }
-    ],
-    "require": {
+		{
+			"name": "Jan Pecha",
+			"email": "janpecha@email.cz"
+		}
+	],
+	"require": {
 
-    }
+	}
 }
