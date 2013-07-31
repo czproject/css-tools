@@ -66,7 +66,7 @@
 				}
 				elseif($state === self::S_STRING)
 				{
-					if($s[$i] === $stringChar)
+					if($lastChar !== '\\' && $s[$i] === $stringChar)
 					{
 						$state = self::S_NORMAL;
 						$stringChar = '';
