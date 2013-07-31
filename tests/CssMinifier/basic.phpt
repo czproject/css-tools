@@ -31,3 +31,10 @@ Assert::same('.classname{border-top:1px;border-bottom:2px}', $minifier->minify("
     border-bottom: 2px;
 }"));
 
+
+// Remove extra last semicolon
+Assert::same('.classname{border-top:1px;border-bottom:2px}', $minifier->minify(".classname {
+    border-top: 1px; ;
+    border-bottom: 2px;;;
+}"));
+

@@ -27,16 +27,22 @@
 			$s = preg_replace('#\s+#', ' ', $s); // compress space
 			$s = preg_replace('# ([^(0-9a-z.\#*-])#i', '$1', $s);
 			$s = preg_replace('#([^0-9a-z%)]) #i', '$1', $s);
-			$s = str_replace(';}', '}', $s); // remove leading semicolon
+			while(strpos($s, ';}') !== FALSE)
+			{
+				$s = str_replace(';}', '}', $s); // remove leading semicolon
+			}
 			$s = trim($s);
 			
 			// replace SPACE => NEW LINE
 			$state = self::S_NORMAL;
 			$stringChar = '';
+			$lastChar = NULL;
 			$len = strlen($s);
+			$buffer = '';
 			
 			for($i = 0; $i < $len; $i++)
 			{
+				$currentChar = $s[$i];
 				if($state === self::S_NORMAL)
 				{
 					if($s[$i] === '\'' || $s[$i] === '"')
@@ -46,7 +52,16 @@
 					}
 					elseif($s[$i] === ' ')
 					{
-						$s[$i] = "\n";
+						//$s[$i] = "\n";
+						$buffer .= "\n";
+						continue;
+					}
+					elseif($s[$i] === ';')
+					{
+						if($lastChar === ';')
+						{
+							continue;
+						}
 					}
 				}
 				elseif($state === self::S_STRING)
@@ -57,9 +72,11 @@
 						$stringChar = '';
 					}
 				}
+				
+				$buffer .= $lastChar = $currentChar;
 			}
 			
-			return $s;
+			return $buffer;
 		}
 	}
 	
