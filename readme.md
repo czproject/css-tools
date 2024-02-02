@@ -1,11 +1,11 @@
-CSS Minifier
-------------
+# CzProject\CssTools
 
-Simple CSS minifier.
+
+CSS tools for PHP.
 
 ``` php
 <?php
-	$minifier = new Cz\CssMinifier\CssMinifier;
+	$minifier = new CzProject\CssTools\CssMinifier;
 	$result = $minifier->minify("body {
 		color: #333;
 		background: #fff;

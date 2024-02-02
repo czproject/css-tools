@@ -2,7 +2,7 @@
 
 	declare(strict_types=1);
 
-	namespace Cz\CssMinifier;
+	namespace CzProject\CssTools;
 
 
 	class CssMinifier

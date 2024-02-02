@@ -7,7 +7,7 @@ use Tester\Assert;
 require __DIR__ . '/../bootstrap.php';
 
 
-$minifier = new Cz\CssMinifier\CssMinifier;
+$minifier = new CzProject\CssTools\CssMinifier;
 
 // Basic
 Assert::same('body{color:#333;background:#fff}', $minifier->minify("body {
