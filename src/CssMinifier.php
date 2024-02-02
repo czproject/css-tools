@@ -1,5 +1,7 @@
 <?php
 
+	declare(strict_types=1);
+
 	namespace Cz\CssMinifier;
 
 
@@ -10,8 +12,8 @@
 
 
 		/**
-		 * @link	https://github.com/nette/build-tools/blob/master/tasks/minifyJs.php#L51-L56
-		 * @author	David Grudl, 2011
+		 * @link   https://github.com/nette/build-tools/blob/master/tasks/minifyJs.php#L51-L56
+		 * @author David Grudl, 2011
 		 */
 		public function minify(string $s): string
 		{
@@ -64,4 +66,3 @@
 			return $buffer;
 		}
 	}
-

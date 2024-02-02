@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
@@ -36,4 +39,3 @@ Assert::same('.classname{border-top:1px;border-bottom:2px}', $minifier->minify("
     border-top: 1px; ;
     border-bottom: 2px;;;
 }"));
-
