@@ -15,5 +15,7 @@ Simple CSS minifier.
 ```
 
 
-License: **New BSD License**
+------------------------------
 
+License: [New BSD License](license.md)
+<br>Author: Jan Pecha, https://www.janpecha.cz/
