@@ -23,6 +23,18 @@ CzProject\CssTools requires PHP 7.4.0 or later.
 
 ## Usage
 
+### CSS generator
+``` php
+$file = new CssTools\CssFile;
+$file->addRule('.button', [
+	'color' => CssTools\Color::hex('#F8A'),
+	'font-size' => CssTools\Number::px2rem(48),
+	'background-color' => NULL,
+]);
+
+echo $file->render();
+```
+
 ### CSS minifier
 
 ``` php
