@@ -1,8 +1,7 @@
 <?php
 use Tester\Assert;
 
-require __DIR__ . '/bootstrap.php';
-require __DIR__ . '/../../src/CssMinifier.php';
+require __DIR__ . '/../bootstrap.php';
 
 
 $minifier = new Cz\CssMinifier\CssMinifier;
