@@ -12,15 +12,13 @@
 		/**
 		 * @link	https://github.com/nette/build-tools/blob/master/tasks/minifyJs.php#L51-L56
 		 * @author	David Grudl, 2011
-		 * @param	string
-		 * @return	string
 		 */
-		public function minify($s)
+		public function minify(string $s): string
 		{
-			$s = preg_replace('#/\*.*?\*/#s', '', $s); // remove comments
-			$s = preg_replace('#\s+#', ' ', $s); // compress space
-			$s = preg_replace('# ([^(0-9a-z.\#*-])#i', '$1', $s);
-			$s = preg_replace('#([^0-9a-z%)]) #i', '$1', $s);
+			$s = (string) preg_replace('#/\*.*?\*/#s', '', $s); // remove comments
+			$s = (string) preg_replace('#\s+#', ' ', $s); // compress space
+			$s = (string) preg_replace('# ([^(0-9a-z.\#*-])#i', '$1', $s);
+			$s = (string) preg_replace('#([^0-9a-z%)]) #i', '$1', $s);
 
 			while (strpos($s, ';}') !== FALSE) {
 				$s = str_replace(';}', '}', $s); // remove leading semicolon
