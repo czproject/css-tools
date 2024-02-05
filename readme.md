@@ -23,6 +23,20 @@ CzProject\CssTools requires PHP 7.4.0 or later.
 
 ## Usage
 
+### CSS compiler
+
+Expands `@import` rules in file.
+
+``` php
+$compiler = new CzProject\CssTools\CssCompiler;
+$compiler->compileFile(__DIR__ . '/styles.css'); // overwrite styles.css with compiled version
+$compiledStyles = $compiler->processFile(__DIR__ . '/styles2.css');
+$compiledStyles = $compiler->processContent(
+	'@import "mystyles.css";',
+	$stylesheetsRootDirectory
+);
+```
+
 ### CSS generator
 ``` php
 $file = new CzProject\CssTools\CssFile;
