@@ -18,7 +18,7 @@ CSS tools for PHP.
 composer require czproject/css-tools
 ```
 
-CzProject\CssTools requires PHP 7.4 or later.
+CzProject\CssTools requires PHP 8.0 or later.
 
 
 ## Usage
