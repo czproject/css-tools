@@ -43,7 +43,7 @@ class FileContent
 }
 
 
-Tests::testWithTempDir('Basic', function ($tempDir) {
+Tests::testWithTempDir('Basic', function (string $tempDir) {
 	$compiler = new CssCompiler;
 
 	FileContent::create([
