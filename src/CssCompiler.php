@@ -34,7 +34,7 @@
 		/**
 		 * @see https://github.com/dg/ftp-deployment/blob/bf1cffb597896dd0d05cded01a9c3a16596c506d/src/Deployment/Preprocessor.php#L104
 		 */
-		private function expandCssImports(string $content, string $currentDirectory, string $currentMediaQuery = NULL): string
+		private function expandCssImports(string $content, string $currentDirectory, ?string $currentMediaQuery = NULL): string
 		{
 			return (string) preg_replace_callback('#@import\s+(?:url)?[(\'"]+(.+)[)\'"]+(\s+.+)?;#U', function ($m) use ($currentDirectory, $currentMediaQuery) {
 				$file = $currentDirectory . '/' . $m[1];
